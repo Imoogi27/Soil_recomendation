@@ -3,7 +3,7 @@ import json
 import os
 from ultralytics import YOLO
 
-# Path to your trained model: ../soil_training/weights/best.pt (relative to backend/)
+
 MODEL_PATH = os.path.join(
     os.path.dirname(__file__),
     "..",
@@ -12,7 +12,6 @@ MODEL_PATH = os.path.join(
     "best.pt",
 )
 
-# Load model once
 model = YOLO(MODEL_PATH)
 
 def main():
@@ -22,9 +21,10 @@ def main():
 
     image_path = sys.argv[1]
 
-    # Run prediction
-    results = model(image_path)
+ 
+    results = model.predict(image_path, verbose=False)
     r = results[0]
+
     probs = r.probs
     top_idx = int(probs.top1)
     top_conf = float(probs.top1conf)
@@ -35,8 +35,9 @@ def main():
         "confidence": top_conf,
     }
 
-    # Node.js will read this JSON from stdout
-    print(json.dumps(output))
+ 
+    sys.stdout.write(json.dumps(output))
+    sys.stdout.flush()
 
 if __name__ == "__main__":
     main()
