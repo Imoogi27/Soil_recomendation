@@ -1,0 +1,554 @@
+/* ========= GLOBAL ========= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  color: #022c22; /* deep green */
+}
+
+/* main background similar to Tailwind gradient */
+.bg-gradient-to-br.from-emerald-50.via-green-50.to-teal-50 {
+  min-height: 100vh;
+  background: linear-gradient(
+    135deg,
+    #ecfdf3 0%,
+    #e0fbe3 40%,
+    #d1fae5 70%,
+    #ccfbf1 100%
+  );
+}
+
+/* container */
+.container {
+  width: 100%;
+  max-width: 1120px; /* ~max-w-7xl */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ========= TYPOGRAPHY ========= */
+
+h1 {
+  font-size: 1.9rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+h3,
+h4 {
+  margin: 0;
+}
+
+/* text sizes */
+.text-lg {
+  font-size: 1.063rem;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+}
+
+/* text alignment */
+.text-center {
+  text-align: center;
+}
+
+/* text colors */
+.text-green-900 {
+  color: #022c22;
+}
+
+.text-green-700 {
+  color: #047857;
+}
+
+/* ========= LAYOUT & SPACING ========= */
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.py-12 {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.p-8 {
+  padding: 2rem;
+}
+
+.p-10 {
+  padding: 2.5rem;
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
+
+.mt-10 {
+  margin-top: 2.5rem;
+}
+
+.mt-16 {
+  margin-top: 4rem;
+}
+
+.mb-1 {
+  margin-bottom: 0.25rem;
+}
+
+.mb-3 {
+  margin-bottom: 0.75rem;
+}
+
+.mb-5 {
+  margin-bottom: 1.25rem;
+}
+
+.mb-8 {
+  margin-bottom: 2rem;
+}
+
+/* flex + alignment */
+.flex {
+  display: flex;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.inline-flex {
+  display: inline-flex;
+}
+
+.gap-3 {
+  gap: 0.75rem;
+}
+
+.gap-4 {
+  gap: 1rem;
+}
+
+.gap-8 {
+  gap: 2rem;
+}
+
+/* grid layout */
+.grid {
+  display: grid;
+  gap: 2rem;
+}
+
+/* mobile: 1 column, desktop: 2 columns */
+.lg\:grid-cols-2 {
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 1024px) {
+  .lg\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* ========= CARDS, BORDERS, RADIUS ========= */
+
+.bg-white {
+  background-color: #ffffff;
+}
+
+.rounded-2xl {
+  border-radius: 1rem;
+}
+
+.rounded-3xl {
+  border-radius: 1.5rem;
+}
+
+.rounded-xl {
+  border-radius: 0.75rem;
+}
+
+/* card shadow + border */
+.shadow-lg {
+  box-shadow: 0 18px 45px rgba(16, 185, 129, 0.18);
+}
+
+.shadow-green-500\/5 {
+  /* just soft shadow; the name is from Tailwind */
+  box-shadow: 0 18px 45px rgba(16, 185, 129, 0.08);
+}
+
+.border {
+  border-width: 1px;
+  border-style: solid;
+}
+
+.border-green-100\/50,
+.border-green-100\/70,
+.border-green-100 {
+  border-color: rgba(220, 252, 231, 0.7);
+}
+
+/* dashed border around upload area */
+.border-dashed {
+  border-style: dashed;
+}
+
+/* ========= SPECIAL BLOCKS ========= */
+
+.w-14 {
+  width: 3.5rem;
+}
+
+.h-14 {
+  height: 3.5rem;
+}
+
+.w-10 {
+  width: 2.5rem;
+}
+
+.h-10 {
+  height: 2.5rem;
+}
+
+/* gradient for icon backgrounds */
+.bg-gradient-to-br.from-green-500.to-emerald-600 {
+  background: linear-gradient(135deg, #22c55e, #059669);
+}
+
+/* upload box min height */
+.min-h-\[220px\] {
+  min-height: 220px;
+}
+
+/* make image fill its box */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* simple button style for Reset */
+button {
+  border: none;
+  background: transparent;
+  font: inherit;
+  cursor: pointer;
+}
+
+.text-red-500 {
+  color: #ef4444;
+}
+
+.text-red-500:hover,
+.text-red-600 {
+  color: #dc2626;
+}
+
+/* small “pill” tags (like climate chip) */
+.inline-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem 1rem;
+  border-radius: 999px;
+  background-color: #22c55e1a;
+  color: #16a34a;
+  font-size: 0.85rem;
+}
+
+/* Utility for subtle cards in WeatherLocation */
+.card-soft {
+  background-color: #f0fdf4;
+  border-radius: 1.25rem;
+  padding: 1.5rem;
+}
+
+/* Just to give the whole page some breathing room on large screens */
+@media (min-width: 768px) {
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+/* Upload box container */
+.upload-box {
+  width: 100%;
+  min-height: 240px;
+  border: 3px dashed #22c55e;
+  border-radius: 16px;
+  background-color: rgba(240, 253, 244, 0.7);
+  padding: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.25s;
+}
+
+.upload-box:hover {
+  background-color: rgba(187, 247, 208, 0.6);
+  border-color: #16a34a;
+}
+
+/* Make the preview image stay inside the box */
+.preview-wrapper {
+  width: 100%;
+  height: 260px;
+  overflow: hidden;
+  border-radius: 14px;
+}
+
+.preview-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Reset button styling */
+.reset-btn {
+  padding: 6px 14px;
+  border-radius: 6px;
+  background-color: #fee2e2;
+  color: #b91c1c;
+  border: 1px solid #fecaca;
+  font-size: 14px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.reset-btn:hover {
+  background-color: #fecaca;
+  color: #7f1d1d;
+}
+.reset-btn:active {
+  background-color: #fca5a5;
+  color: #7f1d1d;
+}
+
+/* ===== Location + Weather Card ===== */
+
+.loc-weather-card {
+  margin-top: 24px;
+  padding: 24px 32px;
+  border-radius: 26px;
+  background: #ffffff;
+  border: 1px solid #bbf7d0;
+  box-shadow: 0 18px 40px rgba(22, 163, 74, 0.08);
+  display: flex;
+  gap: 40px;
+  align-items: stretch;
+}
+
+.loc-col {
+  flex: 1;
+  padding-right: 24px;
+  border-right: 1px solid #e5f9ed;
+}
+
+.weather-col {
+  flex: 1;
+  padding-left: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.loc-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.loc-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  background: #dcfce7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #15803d;
+}
+
+.loc-icon--blue {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.loc-header h2 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #064e3b;
+}
+
+.loc-header p {
+  margin: 0;
+  font-size: 12px;
+  color: #047857;
+}
+
+.loc-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.loc-row .label {
+  color: #047857;
+}
+
+.loc-row .value {
+  color: #065f46;
+  font-weight: 500;
+}
+
+.badge-climate {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 14px;
+  border-radius: 999px;
+  background: #22c55e;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* WEATHER RIGHT SIDE */
+
+.weather-main {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.weather-box {
+  flex: 1;
+  border-radius: 20px;
+  padding: 16px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.weather-box--temp {
+  background: #fff7ed; /* light orange */
+}
+
+.weather-box--humid {
+  background: #eff6ff; /* light blue */
+}
+
+.weather-box-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.weather-box-value {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.weather-box-label {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+/* bottom strip */
+
+.weather-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 4px;
+  padding: 14px 18px;
+  border-radius: 18px;
+  background: #ecfdf5;
+}
+
+.weather-footer > div {
+  flex: 1;
+}
+
+.footer-label {
+  display: block;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #6b7280;
+  margin-bottom: 2px;
+}
+
+.footer-value {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: #047857;
+}
+
+/* small screen layout */
+@media (max-width: 768px) {
+  .loc-weather-card {
+    flex-direction: column;
+    padding: 18px 16px;
+  }
+
+  .loc-col {
+    padding-right: 0;
+    border-right: none;
+    border-bottom: 1px solid #e5f9ed;
+    padding-bottom: 16px;
+    margin-bottom: 12px;
+  }
+
+  .weather-col {
+    padding-left: 0;
+  }
+
+  .weather-footer {
+    flex-direction: column;
+  }
+}
