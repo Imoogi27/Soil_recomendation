@@ -165,11 +165,11 @@ const handleReset = () => {
             <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center shadow-lg shadow-green-500/30">
               <Sprout className="w-8 h-8 text-white" strokeWidth={2.5} />
             </div>
-            <h1 className="text-3xl font-semibold text-green-900">
+            <h1 className="text-3xl font-semibold text-gray-900">
               AI Soil Analysis
             </h1>
           </div>
-          <p className="text-green-700 text-lg max-w-2xl mx-auto leading-relaxed">
+          <p className="text-black text-lg max-w-2xl mx-auto leading-relaxed">
             Advanced soil composition analysis with AI-powered crop
             recommendations
           </p>

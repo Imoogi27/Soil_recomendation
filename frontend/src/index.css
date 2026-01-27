@@ -17,7 +17,7 @@ body,
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     sans-serif;
-  color: #022c22; /* deep green */
+  color: #041d18; /* deep green */
 }
 
 /* main background similar to Tailwind gradient */
@@ -25,17 +25,17 @@ body {
   min-height: 100vh;
   background: linear-gradient(
     135deg,
-    #ecfdf3 0%,
-    #e0fbe3 40%,
-    #d1fae5 70%,
-    #ccfbf1 100%
+    #75c585 0%,
+    #4eb05a 40%,
+    #09b25b 70%,
+    #67d6be 100%
   );
 }
 
 /* container */
 .container {
-  width: 100%;
-  max-width: 1120px; /* ~max-w-7xl */
+  width: 80%;
+  max-width: 1100px; /* ~max-w-7xl */
   margin-left: auto;
   margin-right: auto;
 }
@@ -43,13 +43,13 @@ body {
 /* ========= TYPOGRAPHY ========= */
 
 h1 {
-  font-size: 1.9rem;
+  font-size: 3rem;
   font-weight: 600;
   margin: 0;
 }
 
 h2 {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: 600;
   margin: 0;
 }
@@ -75,11 +75,11 @@ h4 {
 
 /* text colors */
 .text-green-900 {
-  color: #022c22;
+  color: #0b5745;
 }
 
 .text-green-700 {
-  color: #047857;
+  color: #11bf8d;
 }
 
 /* ========= LAYOUT & SPACING ========= */
@@ -112,8 +112,7 @@ h4 {
 }
 
 .mt-10 {
-  margin-top: 2.5rem;
-}
+  margin-top: 1.5rem;}
 
 .mt-16 {
   margin-top: 4rem;
@@ -132,7 +131,7 @@ h4 {
 }
 
 .mb-8 {
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 /* flex + alignment */
@@ -165,13 +164,13 @@ h4 {
 }
 
 .gap-8 {
-  gap: 2rem;
+  gap: 1rem;
 }
 
 /* grid layout */
 .grid {
   display: grid;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
 /* mobile: 1 column, desktop: 2 columns */
