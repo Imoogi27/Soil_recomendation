@@ -27,9 +27,9 @@ export function ImageUploader({
   const preview = uploadedImage || localPreview;
 
   return (
-    <div className="bg-white rounded-3xl p-8 shadow-lg shadow-green-500/5 border border-green-100/70 flex flex-col gap-4">
+    <div className="bg-white rounded-3xl p-8 shadow-lg shadow-green-500/5 border border-green-100/70 item-center gap-4">
       <div>
-        <h2 className="text-green-900 text-xl font-semibold mb-1">
+        <h2 className="kulay-ni-ailec text-xl font-semibold mb-1">
           Upload Soil Image
         </h2>
         <p className="text-green-700 text-sm">

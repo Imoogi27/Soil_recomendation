@@ -23,7 +23,7 @@ export function AnalysisResults({
     return (
       <div className="bg-white rounded-3xl p-8 shadow-lg shadow-green-500/5 border border-green-100 flex flex-col items-center justify-center text-center h-full">
         <BarChart3 className="w-10 h-10 text-emerald-500 mb-4" />
-        <h2 className="text-xl font-semibold text-green-900 mb-2">
+        <h2 className="text-xl font-semibold kulay-ni-ailec mb-2">
           Analysis Results
         </h2>
         <p className="text-green-700 text-sm max-w-sm">

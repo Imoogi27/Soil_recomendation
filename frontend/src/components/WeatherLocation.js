@@ -26,7 +26,7 @@ export function WeatherLocation({ weather, location, isLoading }) {
       <div className="loc-col">
         <div className="loc-header">
           <div className="loc-icon">
-            <MapPin size={22} />
+            <MapPin size={30} />
           </div>
           <div>
             <h2>Your Location</h2>
@@ -61,7 +61,7 @@ export function WeatherLocation({ weather, location, isLoading }) {
       <div className="weather-col">
         <div className="loc-header">
           <div className="loc-icon loc-icon--blue">
-            <SunMedium size={22} />
+            <SunMedium size={30} />
           </div>
           <div>
             <h2>Current Weather</h2>
@@ -72,7 +72,7 @@ export function WeatherLocation({ weather, location, isLoading }) {
         <div className="weather-main">
           <div className="weather-box weather-box--temp">
             <div className="weather-box-icon">
-              <ThermometerSun size={24} />
+              <ThermometerSun size={28} />
             </div>
             <div>
               <div className="weather-box-value">
@@ -84,7 +84,7 @@ export function WeatherLocation({ weather, location, isLoading }) {
 
           <div className="weather-box weather-box--humid">
             <div className="weather-box-icon">
-              <Droplets size={24} />
+              <Droplets size={28} />
             </div>
             <div>
               <div className="weather-box-value">
