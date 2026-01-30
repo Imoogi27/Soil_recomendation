@@ -29,10 +29,10 @@ export function ImageUploader({
   return (
     <div className="bg-white rounded-3xl p-8 shadow-lg shadow-green-500/5 border border-green-100/70 item-center gap-4">
       <div>
-        <h2 className="kulay-ni-ailec text-xl font-semibold mb-1">
+        <h2 className="kulay-ni-aldred text-xl font-semibold mb-1">
           Upload Soil Image
         </h2>
-        <p className="text-green-700 text-sm">
+        <p className="kulay-ni-joyce text-sm">
           Upload a close-up image of your soil surface for AI analysis.
         </p>
       </div>
@@ -68,7 +68,7 @@ export function ImageUploader({
         </button>
 
         {isAnalyzing && (
-          <span className="text-sm text-green-700 animate-pulse">
+          <span className="text-sm kulay-ni-joyce animate-pulse">
             Analyzing soil…
           </span>
         )}

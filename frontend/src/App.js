@@ -204,10 +204,7 @@ const handleReset = () => {
         {/* How it works */}
         <div className="mt-16 bg-white rounded-3xl p-10 shadow-lg shadow-green-500/5 border border-green-100/50">
           <div className="flex items-center gap-3 mb-8">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center">
-              <Info className="w-5 h-5 text-white" strokeWidth={2.5} />
-            </div>
-            <h3 className="text-xl font-semibold text-green-900">
+            <h3 className="text-xl font-semibold kulay-ni-aldred">
               How It Works
             </h3>
           </div>
@@ -237,7 +234,7 @@ const handleReset = () => {
                 <div className="text-6xl mb-4 bg-gradient-to-br from-green-200 to-emerald-200 bg-clip-text text-transparent opacity-40">
                   {item.step}
                 </div>
-                <h4 className="text-green-900 mb-3 text-lg font-semibold">
+                <h4 className="kulay-ni-joyce mb-3 text-lg font-semibold">
                   {item.title}
                 </h4>
                 <p className="text-green-700 leading-relaxed text-sm">

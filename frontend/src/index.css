@@ -49,12 +49,17 @@ h1 {
 }
 
 h2 {
-  font-size: 1.5rem;
-  font-weight: 600;
+  font-size: 26px;
+  font-weight: 700;
   margin: 0;
 }
 
-h3,
+h3 {
+  font-size: 26px;
+  font-weight: 700;
+  margin: 0;
+}
+
 h4 {
   margin: 0;
 }
@@ -65,7 +70,12 @@ h4 {
 }
 
 .text-sm {
-  font-size: 0.875rem;
+  font-size: 14px;
+}
+
+.text-m {
+  font-size: 20px;
+  font-weight: 500;
 }
 
 /* text alignment */
@@ -79,11 +89,23 @@ h4 {
 }
 
 .text-green-700 {
-  color: #11bf8d;
+  color: #0ca93b;
 }
 
 .kulay-ni-ailec {
   color: #0a1f19;
+}
+
+.kulay-ni-aldred {
+  color: #045e27;
+}
+
+.kulay-ni-joyce {
+  color: #035e37;
+}
+
+.kulay-ni-kyle {
+  color: #dcfce7;
 }
 
 /* ========= LAYOUT & SPACING ========= */
@@ -103,6 +125,11 @@ h4 {
   padding-bottom: 3rem;
 }
 
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
 .p-8 {
   padding: 2rem;
 }
@@ -112,7 +139,7 @@ h4 {
 }
 
 .mt-4 {
-  margin-top: 8rem;
+  margin-top: 4rem;
 }
 
 .mt-10 {
@@ -123,6 +150,10 @@ h4 {
 }
 
 .mb-1 {
+  margin-bottom: 1.5rem;
+}
+
+.mb-2 {
   margin-bottom: 1.5rem;
 }
 
@@ -160,15 +191,19 @@ h4 {
 }
 
 .gap-3 {
-  gap: 0.75rem;
+  gap: 1.5rem;
 }
 
 .gap-4 {
-  gap: 1rem;
+  gap: 2rem;
 }
 
 .gap-8 {
   gap: 1rem;
+}
+
+.gap-10 {
+  gap: 6rem;
 }
 
 /* grid layout */
@@ -243,12 +278,13 @@ h4 {
 }
 
 .w-10 {
-  width: 2.5rem;
+  width: 3.5rem;
 }
 
 .h-10 {
-  height: 2.5rem;
+  height: 3.5rem;
 }
+
 
 /* gradient for icon backgrounds */
 .bg-gradient-to-br.from-green-500.to-emerald-600 {
@@ -555,4 +591,34 @@ button {
   .weather-footer {
     flex-direction: column;
   }
+}
+
+.analysis-main {
+  display: flex;
+  padding: 10px 10px;
+  margin-bottom: 10px;
+}
+
+.analysis-label {
+  font-size: 14px;
+  color: #2d3034;
+}
+
+.soil-main {
+  display: flex;
+  padding: 6px 6px;
+  margin-bottom: 10px;
+}
+
+.crops-color {
+  background: #85ebaa; 
+  padding: 10px 10px;
+  margin-bottom: 10px;
+}
+
+.crops-tab {
+font-weight: 600;
+background: #15803d;
+padding: 10px 10px;
+border-radius: 14px;
 }
