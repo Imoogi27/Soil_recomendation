@@ -1,0 +1,23 @@
+# Node
+node_modules/
+**/node_modules/
+
+# Env & logs
+.env
+*.log
+
+# Frontend build
+dist/
+build/
+
+# Backend runtime files
+backend/uploads/
+backend/runs/
+backend/__pycache__/
+
+# Python
+*.pyc
+__pycache__/
+
+# AI models (optional but recommended)
+*.pt
