@@ -104,9 +104,12 @@ const handleImageUpload = async (file, previewUrl) => {
     const formData = new FormData();
     formData.append("image", file);
 
-    const res = await fetch("http://localhost:5000/api/soil/analyze-image", {
-      method: "POST",
-      body: formData,
+    const API_BASE =
+    process.env.REACT_APP_API_URL || "http://localhost:5000";
+
+    const res = await fetch(`${API_BASE}/api/soil/analyze-image`, {
+    method: "POST",
+    body: formData,
     });
 
     // Read raw text so we can debug easily
